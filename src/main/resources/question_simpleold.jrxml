@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="question_comulative" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5de499e1-56c0-430f-b3b4-7c0c891f9d41">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="question.number" class="java.lang.String"/>
+	<parameter name="answer.serialNumber" class="java.lang.String"/>
+	<parameter name="answer.text" class="java.lang.String"/>
+	<parameter name="answer.score" class="java.lang.String"/>
+	<parameter name="decision.comments" class="java.lang.String"/>
+	<parameter name="voter.name" class="java.lang.String"/>
+	<parameter name="decision.count" class="java.lang.String"/>
+	<parameter name="voter.childVoter.name" class="java.lang.String"/>
+	<parameter name="voter.iin" class="java.lang.String"/>
+	<parameter name="voter.documentNumber" class="java.lang.String"/>
+	<parameter name="voter.documentDate" class="java.lang.String"/>
+	<parameter name="voter.documentIssuer" class="java.lang.String"/>
+	<parameter name="proxyCard.number" class="java.lang.String"/>
+	<parameter name="proxyCard.date" class="java.lang.String"/>
+	<parameter name="document.hash" class="java.lang.String"/>
+	<parameter name="document.number" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="518" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="10" width="80" height="30" uuid="e90c4dd0-1cd4-459b-a94e-0f8308d56336"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{question.number}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="270" y="10" width="70" height="30" uuid="1f0ff10c-b258-482c-a22d-fb3a2e215dfd"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[THEERD PAGE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="50" width="250" height="30" uuid="a40724ff-1699-4563-8fee-33c974a71fa2"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[Количество мест в  совете директоров]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="510" y="12" width="290" height="30" uuid="79fb2bf3-2231-413b-b0ae-aeebe531c084"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[Разъяснение порядка голосования]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="510" y="100" width="290" height="360" uuid="0dd69900-a5b2-407a-b34f-267ee0b8539e"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[Голосующий вправе выбрать только один вариант голосования (отметить выбранный вариант голосования символом "Х").
+
+Бюллетень для голосования должен быть подписан акционером или уполномоченным представителем.
+
+В случае если голосование осуществляется уполномоченным представителем акционера, в бюллетене указываются реквизиты документа (доверенности, договора, удостоверения опекуна (попечителя), иного документа) на совершение юридически значимых действии от имени Акционера, либо предоставьте сведения об осуществлении представительства по закону
+]]></text>
+			</staticText>
+			<line>
+				<reportElement x="80" y="90" width="420" height="1" uuid="2edaf102-6d2a-48b8-93fa-b59f5f05f7d2"/>
+			</line>
+			<staticText>
+				<reportElement x="80" y="100" width="60" height="30" uuid="73bbb834-9d03-4c2c-b76a-2d0a78572ea0"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[№]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="100" width="50" height="30" uuid="f372a671-45fb-4a5f-a9e5-41a2fc32ac74"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[ФИО]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="100" width="180" height="30" uuid="ff719cc7-330c-400e-8750-bbbd69feb472"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[Количество поданных заявок]]></text>
+			</staticText>
+			<line>
+				<reportElement x="80" y="140" width="420" height="1" uuid="31cdcfd2-8c2b-48b0-a330-75f7b045c481"/>
+			</line>
+			<textField>
+				<reportElement x="80" y="141" width="100" height="30" uuid="5405d433-9ed9-4158-8b7d-70f4be942099"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{answer.serialNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="140" width="100" height="30" uuid="8ce7d104-0f85-489c-9b8b-19e1559f8176"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{answer.text}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="140" width="140" height="30" uuid="55d594f3-10db-445d-9ca4-9691e47f7ab3"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{answer.score}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="80" y="180" width="420" height="1" uuid="a391a88c-5a9a-4324-a9a1-2fb36f0e0684"/>
+			</line>
+			<staticText>
+				<reportElement x="180" y="190" width="100" height="30" uuid="d853cd36-52d2-4489-9fc8-a77bb44e8321"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[Особое мнение]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="240" width="100" height="30" uuid="32a42e97-fb80-4a03-902e-5373420848b3"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[Акционер]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="270" width="130" height="30" uuid="8e156210-ebe6-4d97-9eeb-9ba46ad6a00d"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[Количество голосов]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="300" width="100" height="30" uuid="91870eae-a464-4a79-ac3e-682d52a898c8"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[Представитель]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="350" width="160" height="30" uuid="999acac6-7c4d-4f1a-91c8-d900e5f88de1"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[Реквизиты представителя]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="410" width="100" height="30" uuid="b2a3eb1b-a4fe-46e4-9865-c75437a763d8"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[Доверенность]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="440" width="230" height="30" uuid="374f6eb8-1f1c-4005-9b21-b8c3e9a9df1f"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[Блок электронно-цифровой подписи]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="480" width="100" height="30" uuid="98b719db-a3d2-432e-ae03-482fc8304919"/>
+				<text><![CDATA[БЮЛЛЕТЕНЬ №]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="300" y="190" width="200" height="30" uuid="868fbfef-9ad9-4cdc-a1b1-29ef38d95eec"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{decision.comments}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="240" width="200" height="30" uuid="ae992d10-25a9-48ed-bc13-6ef118ae5bf0"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{voter.name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="270" width="200" height="30" uuid="cec64b49-d5c1-4983-bbb3-122c0877df12"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{decision.count}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="300" width="200" height="30" uuid="1cffdcbc-7456-49cb-8caa-63a4bb2fb98e"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{voter.childVoter.name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="300" y="330" width="30" height="20" uuid="5204167a-ca37-4015-8c8d-4403a2e4a46e"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[ИИН]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="330" y="330" width="120" height="20" uuid="cb9492f5-42ac-41b3-9e1a-6d434f7116d0"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{voter.iin}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="290" y="350" width="180" height="20" uuid="f16fc875-1925-4f47-b8a5-90af4982f7dd"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[, удостоверение личности №]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="290" y="370" width="110" height="20" uuid="e1dd4465-e236-4e45-a438-9da9e53c8995"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{voter.documentNumber}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="400" y="370" width="50" height="20" uuid="d7cac487-5c16-4577-8fcc-7e2dc642261b"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[выдано]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="290" y="390" width="110" height="20" uuid="1bfe436a-7d53-443e-934a-a730182d7eed"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{voter.documentDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="390" width="100" height="20" uuid="04dc5f62-341b-4759-a2bd-27130907043d"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{voter.documentIssuer}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="410" width="100" height="30" uuid="c817536b-482f-41c8-bfe8-088b855a676e"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{proxyCard.number}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="290" y="410" width="20" height="30" uuid="f99afc2b-d419-4063-89b3-2e6d79788bf2"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[№]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="410" width="20" height="30" uuid="de11d777-3afe-4672-b88a-2dc8252ec8cb"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[от]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="430" y="410" width="80" height="30" uuid="4ade019f-ac84-45cb-926c-e1b8d88ec343"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{proxyCard.date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="440" width="210" height="30" uuid="358acc3b-ccd8-4f08-8ac4-de48549ff4ca"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{document.hash}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="480" width="100" height="30" uuid="7d8a41b6-42a3-4b7b-8f7d-867fc0938384"/>
+				<textFieldExpression><![CDATA[$P{document.number}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

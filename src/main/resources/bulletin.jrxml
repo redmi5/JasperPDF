@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="bulletin" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a27a5cb0-21fb-45b3-9349-5b7ee45384ba">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<subDataset name="Empty Dataset1" uuid="6caadfc0-302a-414c-9b07-bb43406bff48"/>
+	<subDataset name="Dataset1" uuid="1e2229bf-c018-4be4-8579-ae33ff4b071e">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<parameter name="document.number" class="java.lang.String"/>
+	<parameter name="voting.type" class="java.lang.String"/>
+	<parameter name="voting.form" class="java.lang.String"/>
+	<parameter name="organization.name" class="java.lang.String"/>
+	<parameter name="voting.initiator" class="java.lang.String"/>
+	<parameter name="voting.endDate" class="java.lang.String"/>
+	<parameter name="organization.address" class="java.lang.String"/>
+	<parameter name="voting.startDate" class="java.lang.String"/>
+	<parameter name="voter.name" class="java.lang.String"/>
+	<parameter name="voter.totalShares" class="java.lang.String"/>
+	<parameter name="question.number" class="java.lang.String"/>
+	<parameter name="question.text" class="java.lang.String"/>
+	<parameter name="image.bulleten" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="753" splitType="Stretch">
+			<textField>
+				<reportElement x="350" y="50" width="150" height="30" uuid="2be2e23c-d8a4-4a5a-bc47-37afd52eb886"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="14" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{document.number}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="90" width="100" height="30" uuid="7295bcd1-e84e-4a3a-a5a5-5cf32af25863"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="13" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{voting.type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="90" width="100" height="30" uuid="5f4da8cd-7eab-46ad-ac56-b6fc182e3b41"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="13" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{voting.form}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="210" y="50" width="130" height="30" uuid="5f30b283-b80a-41fe-8c52-6989d1bdec5b"/>
+				<textElement markup="none">
+					<font fontName="Arial Unicode MS" size="15" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[БЮЛЛЕТЕНЬ №]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="90" width="31" height="30" uuid="f700f5c3-1f7f-46de-8810-d8eba14e7152"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="13" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[для]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="90" width="100" height="30" uuid="8c74b0e3-04fd-4392-a405-efa8ba15aaf9"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="13" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[голосования на]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="90" width="180" height="30" uuid="f2eb9a43-2015-428d-881c-a717f61537c4"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="13" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[Общем собрании акционеров ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="180" y="120" width="140" height="30" uuid="694aa3eb-1d3b-44bc-a7a7-39d535fcda6f"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="13" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{organization.name}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="150" width="550" height="1" uuid="bf2e4a7d-d18e-480e-a549-b7edc557a12d"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="170" width="210" height="30" uuid="628d1388-3ca7-48e9-a6ec-6ed88e267da9"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="13" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[Полное наименование общества: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="270" y="170" width="280" height="30" uuid="6908a57c-357c-4115-8df6-44836a4cd3ba"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="13" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{organization.name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="210" width="210" height="30" uuid="f26ed7dc-6862-4369-9a3a-215ea622fc2f"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="13" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[Инициатор созыва собрания:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="250" width="210" height="40" uuid="f07f8f2d-3f51-4cc9-9685-06258d921a71"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="13" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[Окончательная дата представления бюллетеней:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="300" width="210" height="40" uuid="4dee26fe-c85e-420f-abd7-239f7b55661d"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="13" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[Место нахождения исполнительного органа:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="350" width="210" height="40" uuid="a1864793-ee03-408f-ba73-5f9fc0475704"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="13" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[Дата проведения заседания Общего собрания акционеров:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="400" width="210" height="30" uuid="a4952ca2-773f-4270-bae7-049c5cb98d09"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="13" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[Акционер:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="440" width="210" height="30" uuid="7b04c9d7-f5a0-4564-9c7a-6fc0cfb7c7da"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="13" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[Количество голосующих акций:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="480" width="550" height="1" uuid="448e72ea-236d-47bc-b481-0f55cdc0a838"/>
+			</line>
+			<staticText>
+				<reportElement x="140" y="490" width="299" height="30" uuid="8f90a7e3-f130-4e09-a528-24992c2036a8"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="13" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[Повестка дня Общего собрания акционеров:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="56" y="536" width="24" height="30" uuid="31e1ff1d-94c6-4e80-b554-2286585280a1"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="13" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[№]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="536" width="100" height="30" uuid="8ab5185f-7b2c-44fc-a305-c30e9839fd98"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="13" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[Вопрос:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="38" y="719" width="92" height="30" uuid="1821a75e-af2c-487d-92ec-7560718e919f"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="10" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[БЮЛЛЕТЕНЬ №]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="140" y="719" width="100" height="30" uuid="e5d48103-a6bb-412c-9b06-d92866b0357a"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="10" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{document.number}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="210" width="280" height="30" uuid="86e4524c-9e8f-4929-979a-fcb01ea8d66e"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="13" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{voting.initiator}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="250" width="280" height="30" uuid="f2f66266-ce65-4042-9579-19e3bfef4217"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="13" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{voting.endDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="305" width="280" height="30" uuid="dde0cc9d-22b3-47b4-917f-2e7d786c5515"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="13" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{organization.address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="350" width="280" height="30" uuid="d569dcc0-a22a-4d1c-8b67-61100687ba90"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="13" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{voting.startDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="400" width="280" height="30" uuid="59ffeb34-f82c-49b2-8951-426e7fdafc8d"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="13" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{voter.name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="440" width="280" height="30" uuid="17165aba-760b-4e54-afb7-3cd0c0d96dec"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="13" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{voter.totalShares}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="56" y="580" width="140" height="30" uuid="a6ab7a7b-fbc8-41d4-9cd5-ac1fc2528468"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="13" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{question.number}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="580" width="100" height="30" uuid="09450125-3634-4b3e-b832-0efa1003969b"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="13" pdfFontName="" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{question.text}]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center">
+				<reportElement x="0" y="0" width="550" height="50" uuid="d36f9e22-79a8-46e7-b061-ae9cf2a4ec85"/>
+				<imageExpression><![CDATA[$P{image.bulleten}]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+</jasperReport>
